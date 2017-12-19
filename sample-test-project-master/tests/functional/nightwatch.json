@@ -1,0 +1,35 @@
+{
+  "src_folders" : ["scripts"],
+  "output_folder" : "reports",
+  "selenium" : {
+    "start_process" : false,
+    "server_path" : "",
+    "log_path" : "",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "",
+      "webdriver.ie.driver" : ""
+    }
+  },
+
+  "test_workers" : {"enabled" : true, "workers" : "auto"},
+
+  "test_settings" : {
+    "default" : {
+      "selenium_port"  : 80,
+      "selenium_host"  : "ondemand.saucelabs.com",
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "username" : "${SAUCE_USER}",
+      "access_key" : "${SAUCE_KEY}",
+
+      "desiredCapabilities": {
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    }
+  }
+}
